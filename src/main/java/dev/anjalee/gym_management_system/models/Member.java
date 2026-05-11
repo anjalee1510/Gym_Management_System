@@ -4,11 +4,10 @@ import dev.anjalee.gym_management_system.dtos.MemberDTO;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 @Entity
 @Table(name = "members")
-public class Members {
+public class Member {
     @Id
     @GeneratedValue(strategy =GenerationType.IDENTITY)
     private int id;
@@ -30,7 +29,7 @@ public class Members {
 //        this.membershipEndDate = membershipEndDate;
 //    }
 
-    public Members(String name, String email, String phoneNumber, LocalDate membershipStartDate, LocalDate membershipEndDate) {
+    public Member(String name, String email, String phoneNumber, LocalDate membershipStartDate, LocalDate membershipEndDate) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
@@ -38,7 +37,7 @@ public class Members {
         this.membershipEndDate = membershipEndDate;
     }
 
-    public Members() {
+    public Member() {
 
     }
 
